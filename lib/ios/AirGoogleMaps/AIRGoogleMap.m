@@ -14,10 +14,10 @@
 #import "AIRGoogleMapUrlTile.h"
 #import "AIRGoogleMapOverlay.h"
 #import <GoogleMaps/GoogleMaps.h>
-#import "GMUKMLParser.h"
-#import "GMUPlacemark.h"
-#import "GMUPoint.h"
-#import "GMUGeometryRenderer.h"
+#import <Google-Maps-iOS-Utils/GMUKMLParser.h>
+#import <Google-Maps-iOS-Utils/GMUPlacemark.h>
+#import <Google-Maps-iOS-Utils/GMUPoint.h>
+#import <Google-Maps-iOS-Utils/GMUGeometryRenderer.h>
 #import <MapKit/MapKit.h>
 #import <React/UIView+React.h>
 #import <React/RCTBridge.h>
@@ -449,6 +449,7 @@ id regionAsJSON(MKCoordinateRegion region) {
                     @"latitude": @(location.coordinate.latitude),
                     @"longitude": @(location.coordinate.longitude),
                     @"altitude": @(location.altitude),
+                    @"timestamp": @(location.timestamp),
                     @"accuracy": @(location.horizontalAccuracy),
                     @"altitudeAccuracy": @(location.verticalAccuracy),
                     @"speed": @(location.speed),
